@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>게시판</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/base.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/board.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/font.css') }}" />
+    <script type="text/javascript" src="{{ url_for('static', filename='js/base.js') }}"></script>
+    <style>
+    </style>
+</head>
+<body>
+    <!--상단 바-->
+    <div class="bar"></div>
+    <div class="menuL medium"><a href="{{ url_for('login') }}">로그인</a></div>
+    <div class="menuN medium"><a href="{{ url_for('notice') }}">공지</a></div>
+    <div class="menuC medium"><a href="{{ url_for('board') }}">게시판</a></div>
+    <div class="logo bold"><a href="/">SEOYEON</a></div>
+    <div class="curtain"></div>
+    
+    <div class="container">
+        <div class="searchContainer">
+            <form action="/search" method="post">
+                <input type="text" placeholder="검색어를 입력하세요">
+                <input type="submit" value="검색">
+            </form>
+        </div>
+        
+        <table class="boardTable">
+            <thead class="thead-dark">
+                <tr>
+                    <th class="bold" scope="col">번호</th>
+                    <th class="bold" scope="col">제목</th>
+                    <th class="bold" scope="col">작성자</th>
+                    <th class="bold" scope="col">작성일</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in rows %}
+                <tr>
+                    <th class="medium" scope="row">{{ row[0] }}</th>
+                    <td class="medium"><a href="{{ url_for('notice_detail', id=row[0]) }}" class="card-link">{{ row[1] }}</a></td>
+                    <td class="medium">{{ row[3] }}</td>
+                    <td class="medium">{{ row[4] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

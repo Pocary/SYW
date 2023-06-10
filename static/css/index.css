@@ -1,0 +1,131 @@
+.mainCont {
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(0, 0, 0);
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    opacity: 1;
+    transition: opacity 0.7s, transform 0.7s;
+}
+.serveCont {
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(156, 156, 156);
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    opacity: 1;
+    transition: opacity 0.7s, transform 0.7s;
+}
+
+.lNotice {
+    z-index: 1;
+    width: 20%;
+    height: 8%;
+    position: absolute;
+    background-color: rgb(242, 242, 242);
+    color: rgb(110, 110, 110);
+    border-radius: 0.7em;
+    top: 110%;
+    left: 35%;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 75px;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    transition: opacity 0.7s, transform 0.7s;
+}
+
+.noticeBox {
+    opacity: 1;
+    z-index: 0;
+    width: 20%;
+    height: 0;
+    position: absolute;
+    background-color: rgb(232, 232, 232);
+    color: rgb(0, 0, 0);
+    border-radius: 0.7em;
+    top: 44%;
+    left: 25%;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    transform-origin: top;
+    transform: scaleY(0);
+    transition: opacity 0.7s, transform 0.7s;
+}
+
+.lLunch {
+    z-index: 1;
+    width: 20%;
+    height: 8%;
+    position: absolute;
+    background-color: rgb(242, 242, 242);
+    color: rgb(110, 110, 110);
+    border-radius: 0.7em;
+    top: 110%;
+    left: 65%;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 75px;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    transition: opacity 0.7s, transform 0.7s;
+}
+
+.lunchBox {
+    opacity: 1;
+    z-index: 0;
+    width: 20%;
+    height: 0;
+    position: absolute;
+    background-color: rgb(232, 232, 232);
+    color: rgb(0, 0, 0);
+    border-radius: 0.7em;
+    top: 44%;
+    left: 55%;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    transform-origin: top;
+    transform: scaleY(0);
+    transition: opacity 0.7s, transform 0.7s;
+}
+
+/* ======================================== 애니메이션 효과 ======================================== */
+
+.mainCont.mainCont-move {
+    top: 28%;
+    transition: all 0.7s cubic-bezier(0.1, 0, 0.2, 1.0);
+}
+.serveCont.serveCont-move {
+    top: 35%;
+    transition: all 0.7s cubic-bezier(0.1, 0, 0.2, 1.0);
+}
+
+
+.lNotice.lNotice-move,
+.lLunch.lLunch-move {
+    top: 45%;
+    transition: all 0.7s cubic-bezier(0.1, 0, 0.2, 1.0);
+}
+
+.lunchsLogo.lunchsLogo-move,
+.noticeBox.noticeBox-move,
+.lunchBox.lunchBox-move {
+    opacity: 1;
+    height: 400px;
+    transform: scaleY(1);
+    transition: all 0.7s ease-in;
+}
