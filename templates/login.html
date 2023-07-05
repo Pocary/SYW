@@ -1,19 +1,77 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/base.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/board.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/font.css') }}" />
+    <script type="text/javascript" src="{{ url_for('static', filename='js/base.js') }}"></script>
+
+    <style>
+        h2 {
+            position: absolute;
+            font-size: 2em;
+            float: left;
+            top: 40%;
+            left: 43%;
+        }
+
+        .form-container {
+            position: relative;
+            top: 48%;
+            left: 43%;
+        }
+
+        .register {
+            position: fixed;
+            top: 5%;    
+            right: 14.5%;
+            color: rgb(137, 137, 137);
+            font-size: 20px;
+            font-weight: bold;
+            transform: translateY(-100%);
+            opacity: 1;
+        }
+
+        form input {
+            margin-bottom: 5px;
+        }
+        #username {
+            width: 300px;
+            height: 30px;
+        }
+        #password {
+            width: 300px;
+            height: 30px;
+        }
+        #button {
+            width: 308px;
+            height: 30px;
+        }
+    </style>
 </head>
+
 <body>
-    <h3><a href="/">서연고등학교 </a></h3>
-    <h1>Login</h1>
-    <form action="/login_process" method="POST">
-        <label>Username:</label>
-        <input type="text" name="username"><br>
-        <label>Password:</label>
-        <input type="password" name="password"><br>
-        <input type="submit" value="Login">
-    </form>
-    <a href="{{ url_for('register') }}">회원가입</a>
+    <!--상단 바-->
+    <div class="bar"></div>
+    <div class="menuL medium"><a href="{{ url_for('login') }}">로그인</a></div>
+    <div class="menuN medium"><a href="{{ url_for('notice') }}">공지</a></div>
+    <div class="menuC medium"><a href="{{ url_for('board') }}">게시판</a></div>
+    <div class="logo bold"><a href="/">SEOYEON</a></div>
+    <div class="curtain"></div>
+    <div class="register medium"><a href="{{ url_for('register') }}">회원가입</a></div>
+
+    <h2>LOGIN</h2>
+    <div class="form-container">
+        <form action="/login_process" method="POST">
+            <input id="username" type="text" name="username" placeholder="Username"><br>
+            <input id="password" type="password" name="password" placeholder="Password"><br>
+            <input id="button" type="submit" value="Login">
+        </form>
+    </div>
+    
 </body>
+
 </html>
