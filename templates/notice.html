@@ -5,19 +5,9 @@
     <title>공지사항</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/base.css') }}" />
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/font.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/notice.css') }}" />
     <script type="text/javascript" src="{{ url_for('static', filename='js/base.js') }}"></script>
-    <style>
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        
-        .noticeTable {
-            margin: 0 auto;
-        }
-    </style>
+    
 </head>
 <body>
     <!--상단 바-->
@@ -32,10 +22,10 @@
         <table class="boardTable">
             <thead class="thead-dark">
                 <tr>
-                    <th class="bold" scope="col">번호</th>
-                    <th class="bold" scope="col">제목</th>
-                    <th class="bold" scope="col">작성자</th>
-                    <th class="bold" scope="col">작성일</th>
+                    <th class="num bold" scope="col">번호</th>
+                    <th class="title bold" scope="col">제목</th>
+                    <th class="author bold" scope="col">작성자</th>
+                    <th class="date bold" scope="col">작성일</th>
                 </tr>
             </thead>
             <tbody>
