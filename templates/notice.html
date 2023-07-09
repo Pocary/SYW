@@ -18,7 +18,7 @@
     <div class="logo bold"><a href="/">SEOYEON</a></div>
     <div class="curtain"></div>
     
-    <h2>NOTICE</h2>
+    <h2>공지사항</h2>
     <div class="container">
         <table class="boardTable">
             <thead class="thead">
@@ -30,7 +30,7 @@
             <tbody class="tbody">
                 {% for row in rows %}
                 <tr>
-                    <td class="num bold" scope="row">{{ row[0] }}</th>
+                    <td class="num bold" scope="row">{{ row[0] }}</td>
                     <td class="title medium"><a href="{{ url_for('notice_detail', id=row[0]) }}" class="card-link">{{ row[1] }}</a></td>
                     <td class="author medium">{{ row[3] }}</td>
                     <td class="date medium">{{ row[4] }}</td>
