@@ -2,14 +2,14 @@ h2 {
     position: absolute;
     font-size: 2em;
     float: left;
-    top: 42%;
+    top: 37%;
     left: 41.9%;
     /* justify-content: center; */
 }
 
 .form-container {
     position: relative;
-    top: 50%;
+    top: 45%;
     display: flex;
     justify-content: center;
 }
