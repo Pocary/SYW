@@ -34,7 +34,7 @@ html {
     opacity: 1;
     transition: opacity 0.7s, transform 0.7s;
 }
-.menuL {
+.menuL, .menuLo {
     position: fixed;
     top: 5%;
     right: 2%;
