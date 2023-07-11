@@ -13,18 +13,22 @@
     <meta charset="UTF-8">
     <title>Notice Detail</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/base.css') }}" />
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/board.css') }}" />
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/font.css') }}" />
     <script type="text/javascript" src="{{ url_for('static', filename='js/base.js') }}"></script>
   </head>
 
   <body>
-    <!-- 상단 바 -->
+    <!--상단 바-->
     <div class="bar"></div>
+    {% if 'username' in session %}
+    <div class="menuL medium"><a href="{{ url_for('logout')}}">로그아웃</a></div>
+    {% else %}
     <div class="menuL medium"><a href="{{ url_for('login') }}">로그인</a></div>
+    {% endif %}
     <div class="menuN medium"><a href="{{ url_for('notice') }}">공지</a></div>
     <div class="menuC medium"><a href="{{ url_for('board') }}">게시판</a></div>
     <div class="logo bold"><a href="/">SEOYEON</a></div>
+    <div class="menuLbox medium"></div>
     <div class="curtain"></div>
 
     <h1>{{ row[1] }}</h1>

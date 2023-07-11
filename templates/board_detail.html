@@ -5,7 +5,6 @@
     <title>{{ row[1] }}</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/base.css') }}" />
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/font.css') }}" />
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/notice.css') }}" />
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/board_detail.css') }}" />
     <script type="text/javascript" src="{{ url_for('static', filename='js/base.js') }}"></script>
 </head>
@@ -24,10 +23,16 @@
     <div class="curtain"></div>
 
 
-    <h1 class="title">{{ row[1] }}</h1>
-    <p class="author">{{ row[3] }}</p>
-    <p class="date">{{ row[4] }}</p>
-    <p class="detail">{{ row[2] }}</p>
-    <a href="/board">목록으로</a>
+    <h1 class="title">
+        <span class="realTitle bold" style="font-size: 32px;">{{ row[1] }}</span>
+        <br>
+        <span class="date medium" style="font-size: 16px;">{{ row[4] }}</span>
+    </h1>
+    <p class="author medium">{{ row[3] }}</p>
+    <!-- <p class="date">{{ row[4] }}</p> -->
+    <div class="detailContainer">
+        <pre class="detail medium">{{ row[2] }}</pre>
+    </div>
+    <div class="backDiv"><a class="back medium" href="/board">뒤로가기</a></div>
 </body>
 </html>

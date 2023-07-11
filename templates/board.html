@@ -7,22 +7,27 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/board.css') }}" />
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/font.css') }}" />
     <script type="text/javascript" src="{{ url_for('static', filename='js/base.js') }}"></script>
-    <style>
-    </style>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/login.js') }}"></script>
 </head>
 <body>
     <!--상단 바-->
     <div class="bar"></div>
+    {% if 'username' in session %}
+    <div class="menuL medium"><a href="{{ url_for('logout')}}">로그아웃</a></div>
+    {% else %}
     <div class="menuL medium"><a href="{{ url_for('login') }}">로그인</a></div>
+    {% endif %}
     <div class="menuN medium"><a href="{{ url_for('notice') }}">공지</a></div>
     <div class="menuC medium"><a href="{{ url_for('board') }}">게시판</a></div>
     <div class="logo bold"><a href="/">SEOYEON</a></div>
+    <div class="menuLbox medium"></div>
     <div class="curtain"></div>
+    <div class="write medium"><a href="{{ url_for('board_write') }}">글쓰기</a></div>
     
-    <div class="searchContainer">
+    <div class="searchBox">
         <form action="/search" method="post">
-            <input type="text" placeholder="검색어를 입력하세요">
-            <input type="submit" value="검색">
+            <input id="search" type="text" name="keyword" placeholder="검색어를 입력하세요">
+            <button id="button" type="submit">검색</button>
         </form>
     </div>
     

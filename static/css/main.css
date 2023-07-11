@@ -40,7 +40,8 @@ html {
     z-index: 5;
     position: fixed;
     top: 0%;
-    right: 2%;
+    left: 95%;
+    /* right: 2%; */
     color: rgb(137, 137, 137);
     font-size: 20px;
     font-weight: bold;
