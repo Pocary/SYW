@@ -22,6 +22,9 @@ html {
     left: 0;
     opacity: 1;
     transition: opacity 0.1s, transform 0.1s;
+    animation-name: curtainUp;
+    animation-duration: 0.7s;
+    animation-delay: 0s;
 }
 
 .bar {
@@ -110,4 +113,29 @@ html {
     animation-delay: 0.1s;
     transition: all 0.7s cubic-bezier(0.1, 0, 0.2, 1.0);
     transform: translateY(-100%);
+}
+
+@keyframes curtainUp {
+    0% {
+        bottom: -100px;
+    }
+    25% {
+        bottom: 20px;
+    }
+    30% {
+        bottom: 25px;
+    }
+    45% {
+        bottom: 25px;
+    }
+
+    /* 50% {
+        bottom: 100px;
+    } */
+    75% {
+        top: 100px;
+    }
+    100% {
+        top: -700px;
+    }
 }

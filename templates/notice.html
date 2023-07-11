@@ -17,7 +17,7 @@
     <div class="menuL medium"><a href="{{ url_for('login') }}">로그인</a></div>
     {% endif %}
     <div class="menuN medium"><a href="{{ url_for('notice') }}">공지</a></div>
-    <div class="menuC medium"><a href="{{ url_for('board') }}">게시판</a></div>
+    <div class="menuC medium"><a href="/notice" onclick="delayedRedirect('/board', 3000);">게시판</a></div>
     <div class="logo bold"><a href="/">SEOYEON</a></div>
     <div class="menuLbox medium"></div>
     <div class="curtain"></div>
